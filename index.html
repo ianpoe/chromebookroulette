@@ -3,8 +3,12 @@
   <body>
     <script>
       chance = prompt("Enter the chance you want to die. For example, if you want a one in six chance, type 6.");
-      roll = Math.floor(Math.random() * chance)
-      alert(roll)
+      roll = Math.floor(Math.random() * chance);
+      if (roll === 0) {
+        while (true) {
+          window.open("ianpoe.github.io/reload");
+        }
+      }
     </script>
   </body>
 </html>
