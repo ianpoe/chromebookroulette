@@ -2,7 +2,16 @@
 <html>
   <body>
     <script>
-      chance = prompt("Enter the chance you want to die. For example, if you want a one in six chance, type 6.");
+      chance = prompt("Enter the chance you want to die. For example, if you want a one in six chance, type 6. Type 0 to enter Challenge Mode.");
+      if (chance === 0) {
+        chance = prompt("Enter the chance you want to survive.');
+        roll = Math.floor(Math.random() * chance);
+        if (roll === 0) {
+          alert("Congratulations, you won challenge mode. You had a chance of 1 in " + str(chance));
+        } else {
+          window.open("https://ianpoe.github.io/reload");
+        }
+      }
       roll = Math.floor(Math.random() * chance);
       if (roll === 0) {
         window.open("https://ianpoe.github.io/reload");
